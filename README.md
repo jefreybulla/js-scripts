@@ -1,7 +1,7 @@
-# Scripts in Javascript
+# Scripts in JavaScript
 
 To run scripts saved as .rb use:
 
 ```
-$node filename.js 
+$node filename.js
 ```
