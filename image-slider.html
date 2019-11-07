@@ -1,0 +1,40 @@
+<html>
+  <body>
+    <button id="back">Previous</button>
+    <img id="slider" src="https://beprivate.s3.amazonaws.com/logos/protonmail.jpeg" width="100px" height="100px"/>
+    <button id="next">Next</button>
+
+    <script>
+      var imageArray = [
+        "https://beprivate.s3.amazonaws.com/logos/protonmail.jpeg",
+        "https://beprivate.s3.amazonaws.com/logos/dmail.png",
+        "https://beprivate.s3.amazonaws.com/logos/fastmail.jpeg",
+        "https://beprivate.s3.amazonaws.com/logos/dropbox.png"
+      ]
+
+      var imageFrame = document.getElementById("slider");
+      //imageFrame.src = "https://beprivate.s3.amazonaws.com/logos/fastmail.jpeg";
+
+      document.getElementById("next").addEventListener("click",goNext);
+      document.getElementById("back").addEventListener("click",goBack);
+
+      var currentImage = 0;
+
+      function goNext(){
+        if (currentImage < (imageArray.length -1)) {
+          currentImage += 1;
+          imageFrame.src = imageArray[currentImage];
+        }
+      }
+
+      function goBack(){
+        if (currentImage != 0) {
+          currentImage -= 1;
+          imageFrame.src = imageArray[currentImage];
+        }
+      }
+
+
+    </script>
+  </body>
+</html>
