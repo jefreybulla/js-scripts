@@ -1,0 +1,75 @@
+<!--
+#Events
+
+onchange	     An HTML element has been changed
+onclick	       The user clicks an HTML element
+onmouseover	   The user moves the mouse over an HTML element
+onmouseout	   The user moves the mouse away from an HTML element
+onkeydown	     The user pushes a keyboard key
+onload	       The browser has finished loading the page
+
+Events can be added to HTML elements as attributes.
+For example: <p onclick="someFunc()">some text</p>
+
+
+##Event propagation
+
+Capturing goes down the DOM. Events of outer elements arte triggered first.
+Bubbling goes up the DOM. Events of inner elements are triggered first.
+
+When using addEventListener by default bubbling propagation is used
+addEventListener(event, function, useCapture)  //useCapture is true or false(default)
+-->
+
+<html>
+  <head>
+  </head>
+  <body onload="onf()">
+    <!-- event handler added on the html -->
+    <div id="area-one"></div>
+    <br><br>
+    <div id="area-two"></div>
+    <br><br>
+    <button onclick="show()">Click Me</button>
+    <br><br>
+    <div id="area-three">click me to see current date</div>
+    <br><br>
+    <div><input type="text" id="name" onchange="change()"><div>
+    <br><br>
+    <div id="area-four">click me to get one random number</div>
+
+    <script>
+      //window.load = function(){
+      //  document.getElementById("area-two").innerHTML = "window loaded"
+      //}
+      function onf() {
+        document.getElementById("area-one").innerHTML = "onload done"
+      }
+      function show() {
+        alert("Hi, Jef");
+      }
+
+      function change(){
+        //override the text entered by the user.
+        x = document.getElementById("name").value = "override"
+      }
+
+      //event handler added from JS.
+      var a = document.getElementById("area-three");
+      a.onclick = function renderDate(){
+        a.innerHTML = Date();
+      }
+
+      //add and remove events with addEventListener
+      areaFour = document.getElementById("area-four")
+      areaFour.addEventListener("click",start);
+
+      function start(){
+        areaFour.innerHTML = Math.random();
+        areaFour.removeEventListener("click",start);
+      }
+
+    </script>
+
+  </body>
+</html>
