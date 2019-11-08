@@ -24,4 +24,4 @@ for(i of myArray){
 const test = (a, b = 3, c = 42) => {
   return a + b + c;
 }
-console.log(test(5)); //50 
+console.log(test(5)); //50
