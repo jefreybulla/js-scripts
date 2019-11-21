@@ -7,8 +7,9 @@ let obj = {
 
 console.log(obj.p2)
 
-for (let i in obj){
-  console.log(i);
+//for in loop gets the keys of an object
+for (let key in obj){
+  console.log(key);
 }
 //ouput: p1 p2 p3
 

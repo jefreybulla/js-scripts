@@ -56,7 +56,7 @@ class Rectangle {
     this.height = height;
     this.width = width;
   }
-  // Getter -call without parenthesis '()': object.area
+  // Getter -call without parenthesis '()': object.area.
   get area() {
     return this.calcArea();
   }

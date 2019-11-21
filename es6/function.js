@@ -1,16 +1,34 @@
-//Prior to ES6, a JavaScript function was defined like this:
-function add(x, y) {
+function add(x, y=4) {
   var sum = x+y;
   console.log(sum);
 }
-//ES6 sintax:
-const newAdd = (x,y) => {
+//ES6 alternative sintax: Arrow function
+const newAdd = (x,y=4) => {
   let sum = x+y;
   console.log(sum);
 }
-newAdd(3,6)
+newAdd(3,6);   //9
+newAdd(3);   //7
 
-//short form of a simple function thart returnes a value:
+//arrow function with one argument
+let reflect1 = value => value;
+//equivalent to
+let reflect2 = value => {
+  return value;
+}
+//equivalent to
+let reflect3 = function(value){
+  return value;
+}
+console.log(`reflect1: ${reflect1("juju")}`);
+console.log(`reflect2: ${reflect2("juju")}`);
+console.log(`reflect3: ${reflect3("juju")}`);
+
+//arrow function with no parameters
+let printName = () => "Name: Jef";
+console.log(printName());
+
+//short form of a simple function thart returnes a simple value:
 const greet = x => `Welcome, ${x}`;
 console.log(greet("Jef"));
 

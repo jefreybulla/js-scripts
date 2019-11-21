@@ -22,5 +22,11 @@ function letTest() {
   console.log(x);  // 1
 }
 
-//const create immutable variables. Next line generates an exception
-//b = 'hi';
+//const create immutable variables. They must be initialized on declaration.
+//b = 'hi'; //generates an exception
+
+//No redeclaration in the same block between var, let and const
+var x = 10;
+//let x = 15; //throw an error
+
+//##Best practice is to use const by defaullt and use let only when we a variables's value need to change. 

@@ -88,3 +88,19 @@ let stakeholder = {
 
 let newStakeholder = Object.assign({}, person, {name: 'Bob'});
 console.log(newStakeholder.name);
+
+//using const to create an object
+console.log("-using const to create an object-")
+const pet = {
+  name: "Tony",
+  type: "dog"
+}
+console.log(pet.type);
+pet.type = "cat";       //It's possible to change properties of a const object.
+console.log(pet.type);
+
+/* It is not possible to modify the binding. The following will prodice an error. 
+pet ={
+  color: "brown"
+}
+*/
