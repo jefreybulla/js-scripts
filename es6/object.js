@@ -54,6 +54,7 @@ console.log(`xp: ${newStudent.xp}`);        //Output: 2
 //In the following example, assignment is used to try to generate a new object.
 //However, using = creates a reference to the base object.
 //Because of this reference, changes intended for a new object mutate the original object:
+console.log("-mutation issues-")
 
 let member = {
   name: 'Jack',
@@ -63,7 +64,7 @@ let member = {
 let newMember = member; //  newPerson references person
 newMember.name = 'Bob';
 
-console.log(member.name); // Bob
+console.log(newMember.name); // Bob
 console.log(member.name); // Bob
 
 //To avoid this (mutations), use Object.assign()
@@ -99,7 +100,7 @@ console.log(pet.type);
 pet.type = "cat";       //It's possible to change properties of a const object.
 console.log(pet.type);
 
-/* It is not possible to modify the binding. The following will prodice an error. 
+/* It is not possible to modify the binding. The following will prodice an error.
 pet ={
   color: "brown"
 }
