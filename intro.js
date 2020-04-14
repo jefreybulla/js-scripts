@@ -27,7 +27,7 @@ console.log(num);
 //creating a new line
 console.log("line one \n line two");
 
-//evaluating a string experesion
+//evaluating a string expression
 console.log(eval("8+10"));
 
 //concatenation

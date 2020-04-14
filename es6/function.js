@@ -28,7 +28,7 @@ console.log(`reflect3: ${reflect3("juju")}`);
 let printName = () => "Name: Jef";
 console.log(printName());
 
-//short form of a simple function thart returnes a simple value:
+//short form of a simple function that returnes a simple value:
 const greet = x => `Welcome, ${x}`;
 console.log(greet("Jef"));
 

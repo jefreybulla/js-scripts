@@ -10,7 +10,6 @@ for (;i<=3;){
   i++;
 }
 
-
 //while statement
 i = 0
 console.log("----------")
