@@ -1,9 +1,13 @@
-for(i=0;i<=4;i++){
+// The for loop has three statements
+// You can add breaks and mofify the index inside the loop as well
+// You skip on pass with 'continue'
+
+console.log("using the three statements")
+for(i=0;i<=3;i++){
   console.log(i);
 }
 
-//For loop has three statements. You can add breaks and mofify th index inside the loop as well.
-console.log("----------")
+console.log("using only the second statement")
 var i = 0
 for (;i<=3;){
   console.log(i);
