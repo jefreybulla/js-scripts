@@ -1,6 +1,6 @@
 # Scripts in JavaScript
 
-To run scripts saved as .js use:
+Run scripts with:
 
 ```
 $node filename.js
