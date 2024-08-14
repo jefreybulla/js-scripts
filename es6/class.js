@@ -69,3 +69,57 @@ class Rectangle {
 const square = new Rectangle(10, 10);
 
 console.log(square.area)  ; // 100
+
+
+console.log('Container class ->')
+
+/**
+ * A container of integers that should support
+ * addition, removal, and search for the median integer
+ */
+class Container {
+  constructor() {
+    this.storage = []
+  }
+
+  /**
+   * Adds the specified value to the container
+   *
+   * @param {number} value
+   */
+  add(value) {
+    // TODO: implement this method
+    //this.container = this.container.push(value)
+    console.log(value)
+    this.storage.push(value)
+  }
+
+  /**
+   * Attempts to delete one item of the specified value from the container
+   *
+   * @param {number} value
+   * @return {boolean} true, if the value has been deleted, or
+   *                   false, otherwise.
+   */
+  delete(value) {
+    // TODO: implement this method
+    
+    const index = this.storage.findIndex(n => n == value)
+    if(index){
+      this.storage.splice(index, 1)
+      return true
+    }
+    else{
+      return false;
+    }
+  }
+}
+
+container = new Container();
+container.add(2)
+container.add(3)
+container.add(4)
+
+container.delete(3)
+
+console.log(container)
