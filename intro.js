@@ -15,7 +15,7 @@ y = 3;
 console.log(y);
 
 //changing the data type
-a = 2;
+let a = 2;
 console.log(a);
 a = "two";
 console.log(a);
@@ -37,8 +37,26 @@ console.log("one"+"two");
 console.log("one"*10);
 
 // evaluate if equal: ===
-b = 3
-c = "3"
+console.log('difference between ==  and ===')
+let b = 3
+let c = "3"
 console.log(b == c)
 // evaluate if identical (value and type are the same) with ===
 console.log(b === c)
+
+//Template literals are a way to output variables in the string.
+//use ${} inside backtip characters (``)
+let myName = "Jef";
+console.log(`Welcome, ${myName}`);
+
+a = 8;
+b = 34;
+let msg = `The sum is ${a+b}`;
+console.log(msg);
+
+//Get the data type of a variable:
+console.log(typeof a);
+console.log(typeof msg);
+
+console.log(Object.is(5,"5")); //false
+console.log(Object.is(5,5));  //true
