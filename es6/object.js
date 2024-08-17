@@ -42,7 +42,7 @@ let student = {
   age: 20,
   xp: '2'
 };
-//Use a new object {} as the target and used two objects as sources. Parameters wirh same name will be overriden by the last object.
+//Use a new object {} as the target and use two objects as sources. Parameters wirh same name will be overriden by the last object.
 let newStudent = Object.assign({}, person, student);
 
 console.log(`name: ${newStudent.name}`);    //Output: Bob
@@ -61,11 +61,11 @@ let member = {
   age: 18
 };
 
-let newMember = member; //  newPerson references person
+let newMember = member; //  newMember references member
 newMember.name = 'Bob';
 
 console.log(newMember.name); // Bob
-console.log(member.name); // Bob
+console.log(member.name); // It changed the name of member to Bob!
 
 //To avoid this (mutations), use Object.assign()
 
