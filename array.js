@@ -14,6 +14,11 @@ c[0] = "hi"
 c[1] = "Hello"
 console.log(c)
 
+// initialize values 
+console.log('initializing array with default values')
+const arr = Array(3).fill(0);
+console.log(arr)
+
 //create array with literal sintax
 var d = [99,90,80];
 console.log(d)
