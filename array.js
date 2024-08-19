@@ -33,6 +33,18 @@ const a2 = Array.of(1,2)   //[1,2]
 
 console.log(a2);
 
+// add a new element at end of array
+arr = [1,2,3]
+arr.push(4)   //[1,2,3,4]
+// remove last element of array
+arr.pop()     //[1,2,3]
+// remove first element 
+arr.shift()   // [2,3]
+// add element at the beginning
+arr.unshift(1)  // [1,2,3]
+// select a portion of array slice(start, end(non-inclusive))
+arr.slice(1,3)  //[2,3]
+
 // Iterate over array elements
 a2.forEach( e => console.log(e))
 
