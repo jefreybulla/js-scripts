@@ -40,7 +40,7 @@ console.log(c1.color);
 
 
 //ES6: no function keyword necessary for object declaration of instance methods.
-let car = {
+car = {
   color: "red",
   brand: "bmw",
 
@@ -73,7 +73,7 @@ console.log(user.user_1234);      //Output: 08923
 
 //Object assign to combine objects
 console.log("-Object assign-")
-let person = {
+person = {
   name: 'Jack',
   age: 18,
   sex: 'male'
@@ -133,7 +133,7 @@ console.log(newStakeholder.name);
 
 //using const to create an object
 console.log("-using const to create an object-")
-const pet = {
+pet = {
   name: "Tony",
   type: "dog"
 }
@@ -146,3 +146,10 @@ pet ={
   color: "brown"
 }
 */
+
+//iterating over elements of an object with 'for in'
+console.log('loop an object')
+for(let key in pet){
+  console.log(key)
+  console.log(pet[key])
+}
