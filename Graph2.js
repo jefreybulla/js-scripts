@@ -1,5 +1,4 @@
 // coompared to Graph.js. this implementation checks for unique keys when addEdge since it uses Map object
-// if we wanted 
 const Queue = require('./Queue')
 
 module.exports = class Graph {
