@@ -1,6 +1,5 @@
 /* issues with this implementation:
-- It does not enforce a maximum of two connections per node
-- Allows for duplicate vertices
+- Allows for duplicate vertices since linked list does not check for uniques
 
 */
 
