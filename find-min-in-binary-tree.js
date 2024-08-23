@@ -39,4 +39,4 @@ input.insertBST(12)
 //console.log(input)
 //input.inOrderPrint(input.root.leftChild)
 
-console.log(findMin(input))
+console.log(findMin(input))     // 2

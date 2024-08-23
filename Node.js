@@ -1,3 +1,4 @@
+// Linked List node
 "use strict";
 module.exports = class Node {
   constructor(data) {
