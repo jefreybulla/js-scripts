@@ -7,8 +7,8 @@ Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
 
 */
 
-
-function timeConversion(s){
+// use .mjs extension to be able to export this function
+export default function timeConversion(s){
 
     //console.log(`sCopy: ${sCopy}`)
     // from 01:00:00AM to 11:59:59AM -> remove AM/PM
