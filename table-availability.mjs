@@ -1,10 +1,9 @@
 /*
-given a table at a restaurant and its reservations, produce all available 2-hour slots 
+given a group of tables at a restaurant and its reservations, produce all available 2-hour slots 
 and options every 30 minutes as avaialability allows
 
-Asume one restaurant with one table then expand to multiple tables in one restaurant
-Asume that the restaurant accepts revervations between 12PM-5PM
 
+If restaurant accepts revervations between 12PM-5PM:
 input: reservations = {table1: {2PM}}
 output:  [12PM, 4PM, 4:30PM, 5:00PM]
 */
