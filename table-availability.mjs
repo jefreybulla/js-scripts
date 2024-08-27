@@ -102,7 +102,7 @@ let result = calculateTableAvailability(input)
 let finish = performance.now()
 console.log(result)
 console.log(`execution time: ${finish-start}`)
-// time complexity is O(nxw) where n is the number of tables and w is the numner of reservation windows in a day
+// time complexity is O(n*w) where n is the number of tables and w is the numner of reservation windows in a day
 
 
 //To-do: check availability for specific seats required: e.g table for 4
