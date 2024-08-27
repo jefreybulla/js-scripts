@@ -1,4 +1,5 @@
-/*
+/*\
+Given an imaginary matrix where each element is the result of the left and top element
 
 1.  1.  1.  1.  1
 1   2.  3.  4.  5
@@ -6,7 +7,8 @@
 1   4.  10. 20. 35
 1   5.  15. 35. 70
 
-(2, 2) => 6
+Calculate element in specified location
+Input (2, 2) => 6
 
 */
 
