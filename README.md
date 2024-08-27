@@ -8,6 +8,5 @@ npm install
 Run scripts with:
 
 ```
-$node filename.js
+node <replace_with_filename>
 ```
-
