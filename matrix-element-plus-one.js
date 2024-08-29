@@ -65,5 +65,5 @@ console.log(`execution time: ${finish-start}`)
 Time complexity is O(a*b) which is better than O(2^n)
 For a = 12 and b = 12 
 Approach 1: 27ms
-Approach 2: 0.1ms an order of magnitude faster!
+Approach 2: 0.1ms two orders of magnitude faster!
 */
