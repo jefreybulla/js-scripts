@@ -11,6 +11,11 @@ console.log(test) // false
 const test2 = re.test('123abbc')
 console.log(test2) // true
 
+let value = 'A'
+console.log('is upper case?',(/^[A-Z]*$/).test(value))
+console.log('is lower case?',(/^[a-z]*$/).test(value))
+console.log('is a digit?',(/^[0-9]*$/).test(value))
+
 // Example: Match UUIDs https://en.wikipedia.org/wiki/Universally_unique_identifier
 const re3 = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i
 
