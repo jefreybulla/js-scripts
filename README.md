@@ -1,12 +1,16 @@
 # Scripts in JavaScript
 Use node version specified in `.nvmrc`.
 
-Some scripts have dependencies. Install those with:
+Install dependencies with:
 ```
 npm install
 ```
-Run scripts with:
+Run js scripts with:
 
 ```
 node <replace_with_filename>
+```
+Run ts scripts with:
+```
+ts-node <replace_with_filename>
 ```
