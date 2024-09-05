@@ -28,7 +28,7 @@ Output: [
 // Then per each key calculate the size of the inner Map
 
 
-function countUnique(param: any ){
+function uniqueAssociations(param: any ){
 let n = param.length
 let uniquePairs: { [key: string]: Map<string, boolean> } = {}
 for(let i=0;i<n;i++){
@@ -82,7 +82,7 @@ let icdCodeList: string[][] = [
 ]
 */
   
-let result = countUnique(icdCodeList)
+let result = uniqueAssociations(icdCodeList)
 console.log(result)
 
 
