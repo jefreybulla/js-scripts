@@ -16,7 +16,7 @@ console.log(c)
 
 // initialize values 
 console.log('initializing array with default values')
-const arr = Array(3).fill(0);
+let arr = Array(3).fill(0);
 console.log(arr)
 
 //create array with literal sintax
@@ -80,3 +80,39 @@ const myArray = [2,3,4];
 for(i of myArray){
   console.log(i*2);
 }
+
+
+// map vs forEach
+const officers = [
+  { id: 20, name: 'Captain Piett' },
+  { id: 24, name: 'General Veers' },
+  { id: 56, name: 'Admiral Ozzel' },
+  { id: 88, name: 'Commander Jerjerrod' }
+];
+
+console.log(officers);
+console.log(officers[0])
+console.log(officers[0].name)
+
+// Goal: get the ids only [20, 24, 56, 88]
+
+//option 1: each
+const officersIds = [];
+officers.forEach(function (officer) {
+  officersIds.push(officer.id);
+});
+console.log(officersIds);
+
+//option 2: .map does not require to create an empy array
+const officersIds2 = officers.map(officer => officer.id);
+console.log(officersIds2);
+
+console.log('using .map with index')
+officers.map((item, index) =>{
+  console.log(item)
+  console.log(index)
+})
+
+a = [1,2,3];
+b = a.map(number => number*3);
+console.log(b);

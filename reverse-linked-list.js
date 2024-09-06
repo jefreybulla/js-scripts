@@ -15,18 +15,18 @@ function reverseList1(param){
 // another approach without creating a new list
 // this approach sets the nextElement to rearrange the list
 function reverseList2(list) {
-    let previousNode = null;
-    let currentNode = list.getHead(); // The current node
-    let nextNode = null; // The next node in the list
+    let previousNode = null
+    let currentNode = list.getHead()
+    let nextNode = null
 
     //Reversal
     while (currentNode != null) {
-        nextNode = currentNode.nextElement;
-        currentNode.nextElement = previousNode;
-        previousNode = currentNode;
-        currentNode = nextNode;
+        nextNode = currentNode.nextElement
+        currentNode.nextElement = previousNode
+        previousNode = currentNode
+        currentNode = nextNode
     }
-    list.setHead(previousNode);
+    list.setHead(previousNode)
     return list
   }
 
