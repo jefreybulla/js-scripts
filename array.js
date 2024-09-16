@@ -45,6 +45,35 @@ arr.unshift(1)  // [1,2,3]
 // select a portion of array slice(start, end(non-inclusive))
 arr.slice(1,3)  //[2,3]
 
+/* Splice sintax
+splice(start)
+splice(start, deleteCount)
+splice(start, deleteCount, item1)
+splice(start, deleteCount, item1, item2)
+*/
+
+// remove specific element from array
+const array = [2, 5, 9];
+console.log(array);
+const index = array.indexOf(5);
+if (index > -1) { // only splice array when item is found
+  array.splice(index, 1); // 2nd parameter means remove one item only
+}
+// array = [2, 9]
+console.log(array);
+
+const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');
+// Inserts at index 1
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, 'May');
+// Replaces 1 element at index 4
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+
+
 // Iterate over array elements
 a2.forEach( e => console.log(e))
 

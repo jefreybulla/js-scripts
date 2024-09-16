@@ -66,13 +66,6 @@ function isPowerOfTwo2(n){
 }
 // time complexity O(log(n)) since on each iteration we divide by 2
 
-/*
-stack
-
-
-
-*/
-
 
 //let input = 16      // true
 //let input = -16      // false
