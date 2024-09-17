@@ -5,7 +5,6 @@ input: "10001011001", k = 2
 output: 6
 */
     
-// Possible flips: at the begining, in middle, at the end of string
 // Best case is flippling a 1 when it's sorounded by two 0s
 // Strategy: find k 1s with two zeros on each side and flip it. Otherwise flip any 1
     
@@ -60,9 +59,11 @@ function consecutiveZeros(str, k){
 }
 
 //const input =  "0", k = 2   // output: 1
-//const input =  "10001011001", k = 1   // output: 5
-const input =  "10001011001", k = 2   // output: 6
+//const input =  "10001011001", k = 0   // output: 3
+const input =  "10001011001", k = 1   // output: 5
+//const input =  "10001011001", k = 2   // output: 6
 //const input =  "100010110010", k = 2   // output: 7
+//const input =  "111", k = 5   // output: 3
 
 const result = consecutiveZeros(input,k)
 console.log('result ->')
