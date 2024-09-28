@@ -153,3 +153,23 @@ for(let key in pet){
   console.log(key)
   console.log(pet[key])
 }
+
+
+const myObject = {
+  a: 1,
+  b: 'Two',
+  c: [3,3,3]
+}
+
+console.log('get values in an array')
+let values = Object.values(myObject)
+console.log(values)
+console.log('get keys in an array')
+let keys = Object.keys(myObject)
+console.log(keys)
+
+console.log('convert object to array')
+// Convert object to array. Each value in the returned array is a sub-array containing the name (index 0) and value (index 1)
+
+const entries = Object.entries(myObject);
+console.log(entries)
