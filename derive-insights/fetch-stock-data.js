@@ -1,7 +1,12 @@
 
 /*
-To include secrets, run this script with
-node --env-file=.env fetch-data
+Implement a script to fetch data. Save query in cache and use cache whenever possible
+*/
+
+
+/*
+To include secrets, you need to run this script with
+node --env-file=.env fetch-stack-data
 */
 
 const fs = require('fs').promises
