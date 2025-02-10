@@ -49,3 +49,9 @@ for(let [key, value] of groceryPrices){
   console.log(`value: ${value}`)
 }
 
+console.log('foreach ->')
+groceryPrices.forEach((value,key)=> {
+  console.log(key)
+  console.log(value)
+})
+
