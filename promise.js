@@ -35,4 +35,4 @@ console.log(10)
 console.log(10)
 console.log(10)
 
-
+// Exercise: what is the output of the code above?
