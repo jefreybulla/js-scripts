@@ -40,7 +40,7 @@ const parser = function(arg){
             return Number(splittedInput[i+1]) - Number(splittedInput[i+2])
         }
 
-        // To-do: recursion if the next caracter is another parenthesis
+        // To-do: recursion if the next character is another parenthesis
     }
 }
     
