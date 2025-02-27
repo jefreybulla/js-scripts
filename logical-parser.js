@@ -17,34 +17,48 @@ Some examples:
 "( SUBTRACT ( ADD 3 4 ) 8 )" returns -1
 "( ADD ( ADD 1 2 ) ( SUBSTRACT 2 1 ) )" returns 4
 
-Limitations: no limit in parentesis 
+Limitations: no limits in number of nested operations  
 
 */
 
-
-// General approach
-// Extract data in inner parentesis
-// Compute math operation
-// Save result in variable (partialResult)
-// Return result 
-
 const parser = function(arg){
     const splittedInput = arg.split(' ')
-    console.log(splittedInput)
-
-    for(i=0; i<splittedInput.length;i++){
-        if (splittedInput[i] == 'ADD'){
-            return Number(splittedInput[i+1]) + Number(splittedInput[i+2])
-        }
-        if (splittedInput[i] == 'SUBTRACT'){
-            return Number(splittedInput[i+1]) - Number(splittedInput[i+2])
-        }
-
-        // To-do: recursion if the next character is another parenthesis
+    if(splittedInput[0] == '('){
+        // remove first element of array
+        splittedInput.shift()
     }
+    if (splittedInput[0] == 'ADD'){
+        // if there are more operations
+        if (splittedInput[1] == '('){
+            const newInput1 = splittedInput.slice(1,6).join(' ')
+            splittedInput.splice(0,6)
+            const newInput2 = splittedInput.join(' ')
+            return parser(newInput1) + parser(newInput2)
+        }
+        console.log(`returning: ${Number(splittedInput[1]) + Number(splittedInput[2])}`)
+        return Number(splittedInput[1]) + Number(splittedInput[2])
+    }
+    if (splittedInput[0] == 'SUBTRACT'){
+        // if there are more operations
+        if (splittedInput[1] == '('){
+            const newInput1 = splittedInput.slice(1,6).join(' ')
+            splittedInput.splice(0,6)
+            const newInput2 = splittedInput.join(' ')
+            return parser(newInput1) - parser(newInput2)
+            //return 'extra'
+        }
+        console.log(`returning: ${Number(splittedInput[1]) - Number(splittedInput[2])}`)
+        return Number(splittedInput[1]) - Number(splittedInput[2])
+    }
+    // base case when there is no operator
+    return Number(splittedInput[0])
+
 }
     
 
-//const input = "( SUBTRACT 5 2 )"
-const input = "( ADD 1 2 )"
+//const input = "( SUBTRACT 5 1 )"      // returns 4
+//const input = "( ADD 1 2 )"           // return 3
+const input = "( SUBTRACT ( ADD 3 4 ) 8 )"      // returns -1
+//const input = "( SUBTRACT ( ADD 3 4 ) ( ADD 1 1 ) )"    // returns 5
+//const input = "( ADD ( ADD 1 2 ) ( SUBTRACT 2 1 ) )" // returns 4
 console.log(parser(input))
