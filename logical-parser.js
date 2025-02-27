@@ -62,3 +62,7 @@ const input = "( SUBTRACT ( ADD 3 4 ) 8 )"      // returns -1
 //const input = "( SUBTRACT ( ADD 3 4 ) ( ADD 1 1 ) )"    // returns 5
 //const input = "( ADD ( ADD 1 2 ) ( SUBTRACT 2 1 ) )" // returns 4
 console.log(parser(input))
+
+
+// Time complexity: since each recursive call effectively reduces the size of the problem by half the time complexity is O(nlog(n))
+// Space complexity: O(nlog(n))
