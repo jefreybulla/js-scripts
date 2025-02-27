@@ -33,6 +33,7 @@ const parser = function(arg){
             const newInput1 = splittedInput.slice(1,6).join(' ')
             splittedInput.splice(0,6)
             const newInput2 = splittedInput.join(' ')
+            // Use recursion for inner operations
             return parser(newInput1) + parser(newInput2)
         }
         console.log(`returning: ${Number(splittedInput[1]) + Number(splittedInput[2])}`)
@@ -44,8 +45,8 @@ const parser = function(arg){
             const newInput1 = splittedInput.slice(1,6).join(' ')
             splittedInput.splice(0,6)
             const newInput2 = splittedInput.join(' ')
+            // Use recursion for inner operations
             return parser(newInput1) - parser(newInput2)
-            //return 'extra'
         }
         console.log(`returning: ${Number(splittedInput[1]) - Number(splittedInput[2])}`)
         return Number(splittedInput[1]) - Number(splittedInput[2])
