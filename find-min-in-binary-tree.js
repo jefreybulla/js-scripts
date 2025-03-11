@@ -40,3 +40,4 @@ input.insertBST(12)
 //input.inOrderPrint(input.root.leftChild)
 
 console.log(findMin(input))     // 2
+// Time complexity O(tree height)
