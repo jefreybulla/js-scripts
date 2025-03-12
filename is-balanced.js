@@ -34,12 +34,13 @@ let result = isBalanced(input)
 let finish = performance.now()
 console.log(result)
 console.log(`Execution time: ${finish - start}`)
+// Time complexity: O(n/2)
 
 
 // Approach 2 using a stack data structure 
 const Stack = require('./Stack.js');
 
-console.log('Approach 2 --->')
+console.log('Approach 2: using a stack--->')
 
 function isBalanced2(str){
     // for str[0] to str[n/2-1]: push mirroed items into stack
@@ -87,11 +88,11 @@ let result2 = isBalanced2(input2)
 finish = performance.now()
 console.log(result2)
 console.log(`Execution time: ${finish - start}`)
-// Approach 2 is slower than approach 1
+// Time complexity O(n)
 
 
 /* 
-Similar problem input are number instead we want to check balance
+Similar problem but in this case the input are integers instead. We still want to check if input is balanced
 [2,1,1,2] will return true
 [2,1,0,2] will return false
 */
@@ -118,7 +119,7 @@ function isBalanced3(str){
     }
 }
 
-let input3 = '321123'  // true
+let input3 = '43211234'  // true
 //let input3 = '3213'  // false
 
 start = performance.now()
@@ -126,5 +127,6 @@ let result3 = isBalanced3(input3)
 finish = performance.now()
 console.log(result3)
 console.log(`Execution time: ${finish - start}`)
-// For numbers we don't need to make additional checks 
+// For numbers we don't need to make additional checks e.g. if(str[i] == '{'){<logic here>}
 // Given an input of same length, isBalanced3 faster than isBalanced2
+// Time complexity O(n)
