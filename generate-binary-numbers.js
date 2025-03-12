@@ -1,24 +1,24 @@
 /*
 Generate binary numbers from 1 to n in the form of a string
 */
-const Queue = require('./Queue.js');
+const Queue = require('./Queue.js')
 
 function generateBinaryNumbers(n){
-    let result = [];
-    let myQueue = new Queue();
-    let s1, s2;
-    myQueue.enqueue("1");
+    let result = []
+    let myQueue = new Queue()
+    let s1, s2
+    myQueue.enqueue("1")
     for (let i = 0; i < n; i++) {
 
-        result.push(myQueue.dequeue());     // 1    // 10
-        s1 = result[i] + "0";               // 10   // 100
-        s2 = result[i] + "1";               // 11   // 101
+        result.push(myQueue.dequeue())
+        s1 = result[i] + "0"
+        s2 = result[i] + "1"
 
-        myQueue.enqueue(s1);
-        myQueue.enqueue(s2);            // 10, 11   // 11,100,101
+        myQueue.enqueue(s1)
+        myQueue.enqueue(s2)
 
     }
-    //console.log(myQueue)
+    //console.log(myQueue)      // The Queue ends up with more items that what we need but it works for us
     return result;
 }
 
@@ -33,6 +33,6 @@ function generateBinaryNumbers(n){
 7 = 111
 */
 
-const input = 7    // ["1","10","11"]
+const input = 7
 const result = generateBinaryNumbers(input)
 console.log(result)
