@@ -6,7 +6,7 @@ module.exports = class LinkedList {
     this.head = null;
   }
 
-  //Insertion At Head  
+  //Insertion At Head
   insertAtHead(newData) {
     let tempNode = new Node(newData);
     tempNode.nextElement = this.head;
