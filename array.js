@@ -45,11 +45,11 @@ arr.unshift(1)  // [1,2,3]
 // select a portion of array slice(start, end(non-inclusive))
 arr.slice(1,3)  //[2,3]
 
-/* Splice sintax
+/* Splice sintax to modified array
 splice(start)
 splice(start, deleteCount)
-splice(start, deleteCount, item1)
-splice(start, deleteCount, item1, item2)
+splice(start, deleteCount, additem1)
+splice(start, deleteCount, additem1, additem2)
 */
 
 // remove specific element from array
