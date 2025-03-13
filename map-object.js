@@ -1,5 +1,5 @@
 /*
-Map object is similat to using to the generic Object type, but has some advantages:
+Map object is similar to using to the generic Object type, but has some advantages:
 - You can easiliy calculate its size
 - Better performance for frequent addition and removals
 - iterable with 'for(let [key, value] of myMap)'
