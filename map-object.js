@@ -34,7 +34,7 @@ console.log(groceryPrices.get('banana'))    // 2
 console.log(groceryPrices.has('apple')) //  true
 console.log(groceryPrices.has('strawberry')) //  false
 
-// loop oever keys and values
+// loop over keys and values
 for(let [key, value] of groceryPrices){
   console.log(`key: ${key} - value: ${value}`)
 }
