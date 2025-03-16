@@ -27,7 +27,7 @@ Thus, the result should be [1,0].
 function plusOne(digits){
     n = digits.length
     let lastDigit = digits[n-1]
-    if(lastDigit <= 9){
+    if(lastDigit < 9){
         let number = digits.pop()
         number += 1
         digits.push(number)
@@ -41,31 +41,31 @@ function plusOne(digits){
         let number = Number(digits.join(''))
         //console.log('number ' + number)
         number += 1
-        return number.toString().split('')
+        const resultInStrings = number.toString().split('')
+        return resultInStrings.map(element => Number(element))
     }
-
-
 }
 
 //let input = [1,2,3]    // [1,2,4]
 //let input = [9]   // [1,0]
 //let input = [3,9]   // [4,0]
 //let input = [9,9]   // [1,0,0]
+let input = [3,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9]
 //let input = [6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]
 
+let start = performance.now()
+let result = plusOne(input)
+let finish = performance.now()
+console.log(result)
+console.log(`execution time: ${finish-start}`)
+// Time complexity: O(3n) ~ O(n). However due to costly conversions this solution is not efficient. Approach 2 is an improvement. 
+// Space complexity: O(n)
 
-//console.log(plusOne(input))
-
-
-
-//Approach 2: check if digit is 9, turn to 0 and move left
-
-
+//Approach 2: from right to left check if digit is 9, turn it to 0 and move left. Repeat until the whole array is covered.
 function plusOne2(digits){
     n = digits.length
-    //let carry
     let number
-    for(i=n-1;n>=0;i--){
+    for(i=n-1;i>=0;i--){
         number = digits[i]
         if( number < 9){
             number +=1
@@ -82,15 +82,13 @@ function plusOne2(digits){
     }
 }
 
-//let input2 = [1,2,3]
-//let input2 = [9]   // [1,0]
-//let input2 = [3,9]   // [4,0]
-//let input2 = [9,9]   // [1,0,0]
-let input2 = [6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]
-
-
-console.log(plusOne2(input2))
-
+start = performance.now()
+let result2 = plusOne2(input)
+finish = performance.now()
+console.log(result2)
+console.log(`execution time: ${finish-start}`)
+// Time complexity: O(n). This appoach is ~2X faster than approach 1 for some tested cases
+// Space complexity: O(1)
 
 // Approach 3 use for loop to form the decimal number. Increase multiplier by 10
 // this approach should perform worse than approach 2 since we need to perform more calculations and transformations
