@@ -49,4 +49,4 @@ let heights = [1,1,4,2,1,3]         //3
 let result = heightChecker(heights)
 console.log(result)
 // Time complexity: O(n*log(n))
-// Space complexity: O(1)
+// Space complexity: O(n)
