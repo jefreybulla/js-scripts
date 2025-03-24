@@ -25,3 +25,12 @@ console.log('abc'.padEnd(5))           // 'abc  '
 console.log('abc'.padEnd(5,'-'))       // 'abc--'
 console.log('abc'.padEnd(10, '123'))   // 'abc1231231'
 console.log('abc'.padEnd(1))           // 'abc'
+
+let s2 = ' space  '
+console.log(s2.trim())
+
+// search for substring
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+const searchTerm = "dog";
+const indexOfFirst = paragraph.indexOf(searchTerm);
+console.log(indexOfFirst)   // 15
