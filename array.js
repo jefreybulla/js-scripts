@@ -145,3 +145,7 @@ officers.map((item, index) =>{
 a = [1,2,3];
 b = a.map(number => number*3);
 console.log(b);
+
+
+// Time complexity for built-in Array methods: 
+// https://dev.to/lukocastillo/time-complexity-big-0-for-javascript-array-methods-and-examples-mlg
