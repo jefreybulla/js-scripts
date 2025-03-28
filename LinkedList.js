@@ -93,6 +93,27 @@ module.exports = class LinkedList {
     return this;
   }
 
+  insertNodeAtTail(newNode){
+    //check for case when list is empty
+    if (this.isEmpty()) {
+      //Needs to Insert the new node at Head
+      this.head = newNode;
+      return this;
+    }
+
+    //Start from head
+    let currentNode = this.head;
+
+    //Iterate to the last element
+    while (currentNode.nextElement != null) {
+      currentNode = currentNode.nextElement;
+    }
+
+    //Make new node the nextElement of last node of list
+    currentNode.nextElement = newNode;
+    return this;
+  }
+
   search(value) {               // time complexity: O(n)
     //Start from the first element
     let currentNode = this.head;
