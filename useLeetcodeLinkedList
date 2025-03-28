@@ -1,0 +1,12 @@
+
+const LinkedList = require('./LeetcodeLinkedList.js')
+
+const list = new LinkedList();
+list.addAtHead(10);
+list.addAtHead(5);
+list.addAtTail(20);         // 5 -> 10 -> 20
+console.log(list.get(2)); // Output: 20
+
+list.addAtIndex(1,7)       // 5 -> 7 -> 10 -> 20
+console.log(list.get(1)); // Output: 7
+console.log(list.get(2)); // Output: 10
