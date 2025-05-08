@@ -21,7 +21,7 @@ Follow up: Could you minimize the total number of operations done?
 
 // Approach: use two pointers: writePointer and readPointer
 // writePointer stays where the left-most zero is
-// readPointer moves until it finds a non-zero value. At that moment we swap valuea
+// readPointer moves until it finds a non-zero value. At that moment we swap values
 
 const moveZeros = function(nums) {
     let length = nums.length
